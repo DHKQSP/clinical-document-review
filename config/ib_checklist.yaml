@@ -1,0 +1,209 @@
+document_type: "Investigator's Brochure (IB)"
+version: "1.0"
+
+# IB (Investigator's Brochure) 검토 체크리스트
+sections:
+  essential_info:
+    name: "필수 정보"
+    checks:
+      - id: "ib_001"
+        category: "기본 정보"
+        description: "IB 제목 및 시험약 명칭이 명확한가?"
+        keywords: ["investigator's brochure", "시험약", "제목"]
+        severity: "critical"
+
+      - id: "ib_002"
+        category: "기본 정보"
+        description: "IB 버전 및 작성일자가 명시되어 있는가?"
+        keywords: ["version", "date", "버전", "일자"]
+        severity: "critical"
+
+      - id: "ib_003"
+        category: "기본 정보"
+        description: "의뢰자 정보가 명시되어 있는가?"
+        keywords: ["sponsor", "의뢰자"]
+        severity: "critical"
+
+  summary:
+    name: "요약"
+    checks:
+      - id: "ib_101"
+        category: "요약"
+        description: "시험약에 대한 전반적 요약이 포함되어 있는가?"
+        keywords: ["summary", "요약", "overview"]
+        severity: "major"
+
+      - id: "ib_102"
+        category: "화학명"
+        description: "화학명 및 구조식이 제시되어 있는가?"
+        keywords: ["chemical name", "structure", "화학명", "구조식", "molecular formula"]
+        severity: "critical"
+
+  physical_chemical:
+    name: "물리화학적 특성"
+    checks:
+      - id: "ib_201"
+        category: "물리화학"
+        description: "물리화학적 특성이 기술되어 있는가?"
+        keywords: ["physical", "chemical properties", "물리화학", "특성"]
+        severity: "major"
+
+      - id: "ib_202"
+        category: "제제"
+        description: "제형 정보가 기술되어 있는가?"
+        keywords: ["formulation", "제형", "dosage form"]
+        severity: "major"
+
+  nonclinical:
+    name: "비임상 자료"
+    checks:
+      - id: "ib_301"
+        category: "약리"
+        description: "약리학적 특성이 기술되어 있는가?"
+        keywords: ["pharmacology", "약리", "mechanism of action", "MOA"]
+        severity: "critical"
+
+      - id: "ib_302"
+        category: "약동학"
+        description: "비임상 약동학(PK) 자료가 포함되어 있는가?"
+        keywords: ["pharmacokinetics", "PK", "약동학", "absorption", "distribution"]
+        severity: "major"
+
+      - id: "ib_303"
+        category: "독성"
+        description: "독성 시험 결과가 기술되어 있는가?"
+        keywords: ["toxicology", "독성", "toxicity", "safety pharmacology"]
+        severity: "critical"
+
+      - id: "ib_304"
+        category: "동물시험"
+        description: "동물 시험 자료가 충분히 제공되어 있는가?"
+        keywords: ["animal studies", "동물시험", "preclinical"]
+        severity: "major"
+
+  clinical:
+    name: "임상 자료"
+    checks:
+      - id: "ib_401"
+        category: "임상약리"
+        description: "임상 약리학 정보가 포함되어 있는가?"
+        keywords: ["clinical pharmacology", "임상약리", "human pharmacology"]
+        severity: "critical"
+
+      - id: "ib_402"
+        category: "임상PK"
+        description: "임상 약동학(PK) 자료가 기술되어 있는가?"
+        keywords: ["clinical PK", "임상 약동학", "human PK"]
+        severity: "major"
+
+      - id: "ib_403"
+        category: "임상PD"
+        description: "임상 약력학(PD) 자료가 기술되어 있는가?"
+        keywords: ["pharmacodynamics", "PD", "약력학"]
+        severity: "major"
+
+      - id: "ib_404"
+        category: "유효성"
+        description: "유효성 자료가 포함되어 있는가?"
+        keywords: ["efficacy", "유효성", "effectiveness"]
+        severity: "critical"
+
+      - id: "ib_405"
+        category: "임상경험"
+        description: "이전 임상시험 경험이 기술되어 있는가?"
+        keywords: ["clinical experience", "previous studies", "임상경험"]
+        severity: "major"
+
+  safety:
+    name: "안전성 정보"
+    checks:
+      - id: "ib_501"
+        category: "이상반응"
+        description: "알려진 이상반응이 기술되어 있는가?"
+        keywords: ["adverse reactions", "side effects", "이상반응", "부작용"]
+        severity: "critical"
+
+      - id: "ib_502"
+        category: "중대한이상반응"
+        description: "중대한 이상반응이 명시되어 있는가?"
+        keywords: ["serious adverse", "SAE", "중대한"]
+        severity: "critical"
+
+      - id: "ib_503"
+        category: "금기사항"
+        description: "금기사항이 명확히 기술되어 있는가?"
+        keywords: ["contraindications", "금기", "contraindicated"]
+        severity: "critical"
+
+      - id: "ib_504"
+        category: "경고"
+        description: "특별한 주의사항/경고가 포함되어 있는가?"
+        keywords: ["warnings", "precautions", "경고", "주의사항"]
+        severity: "critical"
+
+      - id: "ib_505"
+        category: "상호작용"
+        description: "약물 상호작용 정보가 기술되어 있는가?"
+        keywords: ["drug interactions", "약물 상호작용", "interactions"]
+        severity: "major"
+
+  special_populations:
+    name: "특수 집단"
+    checks:
+      - id: "ib_601"
+        category: "임신수유"
+        description: "임신/수유부에 대한 정보가 있는가?"
+        keywords: ["pregnancy", "lactation", "임신", "수유"]
+        severity: "major"
+
+      - id: "ib_602"
+        category: "소아"
+        description: "소아 대상 정보가 있는가 (해당시)?"
+        keywords: ["pediatric", "children", "소아"]
+        severity: "minor"
+
+      - id: "ib_603"
+        category: "노인"
+        description: "고령자 대상 정보가 있는가?"
+        keywords: ["elderly", "geriatric", "노인", "고령"]
+        severity: "minor"
+
+      - id: "ib_604"
+        category: "신장애"
+        description: "신기능 장애 환자에 대한 정보가 있는가?"
+        keywords: ["renal impairment", "신장애", "kidney"]
+        severity: "major"
+
+      - id: "ib_605"
+        category: "간장애"
+        description: "간기능 장애 환자에 대한 정보가 있는가?"
+        keywords: ["hepatic impairment", "간장애", "liver"]
+        severity: "major"
+
+  references:
+    name: "참고문헌"
+    checks:
+      - id: "ib_701"
+        category: "참고문헌"
+        description: "적절한 참고문헌이 인용되어 있는가?"
+        keywords: ["references", "참고문헌", "bibliography"]
+        severity: "major"
+
+  appendices:
+    name: "부록"
+    checks:
+      - id: "ib_801"
+        category: "부록"
+        description: "필요한 부록 자료가 첨부되어 있는가?"
+        keywords: ["appendix", "부록", "supplementary"]
+        severity: "minor"
+
+# 자동 검색 패턴
+patterns:
+  cas_number:
+    regex: "\\d{2,7}-\\d{2}-\\d"
+    description: "CAS 번호"
+
+  molecular_formula:
+    regex: "C\\d+H\\d+(N|O|S|Cl|F|Br)*\\d*"
+    description: "분자식"

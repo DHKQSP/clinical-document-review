@@ -1,0 +1,246 @@
+document_type: "Statistical Analysis Plan (SAP)"
+version: "1.0"
+
+# SAP (Statistical Analysis Plan) 검토 체크리스트
+sections:
+  essential_info:
+    name: "필수 정보"
+    checks:
+      - id: "sap_001"
+        category: "기본 정보"
+        description: "SAP 제목 및 프로토콜 번호가 명시되어 있는가?"
+        keywords: ["statistical analysis plan", "SAP", "protocol number"]
+        severity: "critical"
+
+      - id: "sap_002"
+        category: "기본 정보"
+        description: "SAP 버전 및 작성일자가 명시되어 있는가?"
+        keywords: ["version", "date", "버전", "일자"]
+        severity: "critical"
+
+      - id: "sap_003"
+        category: "기본 정보"
+        description: "통계 담당자 정보가 명시되어 있는가?"
+        keywords: ["statistician", "통계 담당", "biostatistician"]
+        severity: "major"
+
+  study_objectives:
+    name: "연구 목적 및 가설"
+    checks:
+      - id: "sap_101"
+        category: "목적"
+        description: "주요 목적(Primary Objective)이 명확히 기술되어 있는가?"
+        keywords: ["primary objective", "주요 목적"]
+        severity: "critical"
+
+      - id: "sap_102"
+        category: "가설"
+        description: "통계적 가설(귀무가설/대립가설)이 명시되어 있는가?"
+        keywords: ["hypothesis", "null hypothesis", "alternative hypothesis", "가설", "귀무가설"]
+        severity: "critical"
+
+  endpoints:
+    name: "평가변수"
+    checks:
+      - id: "sap_201"
+        category: "주평가변수"
+        description: "주요 평가변수(Primary Endpoint)의 정의가 명확한가?"
+        keywords: ["primary endpoint", "주요 평가변수", "primary outcome"]
+        severity: "critical"
+
+      - id: "sap_202"
+        category: "부차평가변수"
+        description: "부차 평가변수(Secondary Endpoint)가 정의되어 있는가?"
+        keywords: ["secondary endpoint", "부차 평가변수"]
+        severity: "major"
+
+      - id: "sap_203"
+        category: "변수정의"
+        description: "각 평가변수의 측정 방법이 명시되어 있는가?"
+        keywords: ["measurement", "assessment", "측정", "평가"]
+        severity: "critical"
+
+  sample_size:
+    name: "표본 크기"
+    checks:
+      - id: "sap_301"
+        category: "표본크기"
+        description: "표본 크기 산출 근거가 기술되어 있는가?"
+        keywords: ["sample size", "표본 크기", "power calculation"]
+        severity: "critical"
+
+      - id: "sap_302"
+        category: "검정력"
+        description: "검정력(Power) 및 유의수준이 명시되어 있는가?"
+        keywords: ["power", "significance level", "alpha", "검정력", "유의수준"]
+        severity: "critical"
+
+      - id: "sap_303"
+        category: "효과크기"
+        description: "예상 효과크기가 제시되어 있는가?"
+        keywords: ["effect size", "효과크기", "clinical difference"]
+        severity: "major"
+
+  analysis_sets:
+    name: "분석 대상군"
+    checks:
+      - id: "sap_401"
+        category: "분석군"
+        description: "분석 대상 집단이 정의되어 있는가?"
+        keywords: ["analysis set", "population", "분석군"]
+        severity: "critical"
+
+      - id: "sap_402"
+        category: "ITT"
+        description: "ITT(Intention-to-Treat) 분석군이 정의되어 있는가?"
+        keywords: ["ITT", "intention-to-treat", "full analysis set", "FAS"]
+        severity: "critical"
+
+      - id: "sap_403"
+        category: "PP"
+        description: "PP(Per-Protocol) 분석군이 정의되어 있는가?"
+        keywords: ["per-protocol", "PP", "per protocol"]
+        severity: "major"
+
+      - id: "sap_404"
+        category: "안전성"
+        description: "안전성 분석 대상군이 정의되어 있는가?"
+        keywords: ["safety population", "safety set", "안전성 분석"]
+        severity: "critical"
+
+  statistical_methods:
+    name: "통계 방법"
+    checks:
+      - id: "sap_501"
+        category: "주분석"
+        description: "주요 분석 방법이 명확히 기술되어 있는가?"
+        keywords: ["primary analysis", "statistical method", "주요 분석", "통계 방법"]
+        severity: "critical"
+
+      - id: "sap_502"
+        category: "통계검정"
+        description: "사용할 통계 검정 방법이 명시되어 있는가?"
+        keywords: ["statistical test", "t-test", "ANOVA", "chi-square", "통계 검정"]
+        severity: "critical"
+
+      - id: "sap_503"
+        category: "신뢰구간"
+        description: "신뢰구간 산출 방법이 기술되어 있는가?"
+        keywords: ["confidence interval", "CI", "신뢰구간"]
+        severity: "major"
+
+      - id: "sap_504"
+        category: "조정"
+        description: "다중비교 조정 방법이 명시되어 있는가 (해당시)?"
+        keywords: ["multiplicity", "multiple comparison", "다중비교", "Bonferroni", "adjustment"]
+        severity: "major"
+
+  missing_data:
+    name: "결측치 처리"
+    checks:
+      - id: "sap_601"
+        category: "결측치"
+        description: "결측치 처리 방법이 기술되어 있는가?"
+        keywords: ["missing data", "결측", "imputation"]
+        severity: "critical"
+
+      - id: "sap_602"
+        category: "대체"
+        description: "결측치 대체 방법이 명시되어 있는가?"
+        keywords: ["LOCF", "imputation", "대체", "MI", "multiple imputation"]
+        severity: "major"
+
+  interim_analysis:
+    name: "중간분석"
+    checks:
+      - id: "sap_701"
+        category: "중간분석"
+        description: "중간분석 계획이 있는가 (해당시)?"
+        keywords: ["interim analysis", "중간분석"]
+        severity: "major"
+
+      - id: "sap_702"
+        category: "중단규칙"
+        description: "조기 중단 규칙이 명시되어 있는가 (해당시)?"
+        keywords: ["stopping rule", "futility", "중단규칙", "조기 종료"]
+        severity: "major"
+
+  subgroup_analysis:
+    name: "하위그룹 분석"
+    checks:
+      - id: "sap_801"
+        category: "하위그룹"
+        description: "계획된 하위그룹 분석이 명시되어 있는가?"
+        keywords: ["subgroup analysis", "하위그룹", "stratification"]
+        severity: "minor"
+
+      - id: "sap_802"
+        category: "층화"
+        description: "층화 요인이 정의되어 있는가 (해당시)?"
+        keywords: ["stratification", "층화", "strata"]
+        severity: "minor"
+
+  safety_analysis:
+    name: "안전성 분석"
+    checks:
+      - id: "sap_901"
+        category: "이상반응"
+        description: "이상반응 분석 방법이 기술되어 있는가?"
+        keywords: ["adverse event", "AE", "이상반응", "safety analysis"]
+        severity: "critical"
+
+      - id: "sap_902"
+        category: "코딩"
+        description: "이상반응 코딩 사전이 명시되어 있는가?"
+        keywords: ["MedDRA", "coding", "코딩", "dictionary"]
+        severity: "major"
+
+      - id: "sap_903"
+        category: "실험실검사"
+        description: "실험실 검사 분석 방법이 기술되어 있는가?"
+        keywords: ["laboratory", "실험실", "lab", "clinical chemistry"]
+        severity: "major"
+
+  software:
+    name: "통계 소프트웨어"
+    checks:
+      - id: "sap_1001"
+        category: "소프트웨어"
+        description: "사용할 통계 소프트웨어가 명시되어 있는가?"
+        keywords: ["SAS", "R", "SPSS", "Stata", "software", "소프트웨어"]
+        severity: "major"
+
+      - id: "sap_1002"
+        category: "버전"
+        description: "소프트웨어 버전이 명시되어 있는가?"
+        keywords: ["version", "버전"]
+        severity: "minor"
+
+  tables_figures:
+    name: "표 및 그림"
+    checks:
+      - id: "sap_1101"
+        category: "목록"
+        description: "생성할 표/그림 목록이 제시되어 있는가?"
+        keywords: ["table", "figure", "표", "그림", "listings"]
+        severity: "major"
+
+      - id: "sap_1102"
+        category: "목업"
+        description: "주요 표의 목업(Shell)이 첨부되어 있는가?"
+        keywords: ["shell", "mockup", "목업", "template"]
+        severity: "minor"
+
+# 자동 검색 패턴
+patterns:
+  alpha_level:
+    regex: "(alpha|α)\\s*=\\s*0\\.\\d+"
+    description: "유의수준"
+
+  power:
+    regex: "(power|검정력)\\s*[:=]?\\s*\\d+%|0\\.\\d+"
+    description: "검정력"
+
+  p_value:
+    regex: "p\\s*[<>=]\\s*0\\.\\d+"
+    description: "p-value"

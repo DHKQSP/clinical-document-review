@@ -1,0 +1,198 @@
+document_type: "Protocol"
+version: "1.0"
+
+# 프로토콜 검토 체크리스트 (ICH-GCP 기반)
+sections:
+  essential_info:
+    name: "필수 정보"
+    checks:
+      - id: "proto_001"
+        category: "기본 정보"
+        description: "프로토콜 제목이 명확하게 기술되어 있는가?"
+        keywords: ["title", "제목", "protocol title"]
+        severity: "critical"
+
+      - id: "proto_002"
+        category: "기본 정보"
+        description: "프로토콜 번호/버전이 명시되어 있는가?"
+        keywords: ["protocol number", "version", "프로토콜 번호", "버전"]
+        severity: "critical"
+
+      - id: "proto_003"
+        category: "기본 정보"
+        description: "프로토콜 작성일자가 명시되어 있는가?"
+        keywords: ["date", "일자", "작성일"]
+        severity: "critical"
+
+      - id: "proto_004"
+        category: "기본 정보"
+        description: "의뢰자(Sponsor) 정보가 명시되어 있는가?"
+        keywords: ["sponsor", "의뢰자"]
+        severity: "critical"
+
+  study_objectives:
+    name: "연구 목적 및 설계"
+    checks:
+      - id: "proto_101"
+        category: "목적"
+        description: "연구의 주요 목적(Primary Objective)이 명확히 기술되어 있는가?"
+        keywords: ["primary objective", "주요 목적", "primary endpoint"]
+        severity: "critical"
+
+      - id: "proto_102"
+        category: "목적"
+        description: "부차적 목적(Secondary Objective)이 기술되어 있는가?"
+        keywords: ["secondary objective", "부차적 목적", "secondary endpoint"]
+        severity: "major"
+
+      - id: "proto_103"
+        category: "설계"
+        description: "연구 설계(Study Design)가 명확히 기술되어 있는가?"
+        keywords: ["study design", "연구 설계", "design"]
+        severity: "critical"
+
+      - id: "proto_104"
+        category: "설계"
+        description: "대상자 수 산출 근거가 기술되어 있는가?"
+        keywords: ["sample size", "대상자 수", "표본 크기", "statistical power"]
+        severity: "critical"
+
+  subject_selection:
+    name: "대상자 선정 기준"
+    checks:
+      - id: "proto_201"
+        category: "선정기준"
+        description: "선정기준(Inclusion Criteria)이 명확히 기술되어 있는가?"
+        keywords: ["inclusion criteria", "선정기준", "inclusion"]
+        severity: "critical"
+
+      - id: "proto_202"
+        category: "제외기준"
+        description: "제외기준(Exclusion Criteria)이 명확히 기술되어 있는가?"
+        keywords: ["exclusion criteria", "제외기준", "exclusion"]
+        severity: "critical"
+
+      - id: "proto_203"
+        category: "중단기준"
+        description: "연구 중단 기준이 명시되어 있는가?"
+        keywords: ["withdrawal criteria", "중단기준", "discontinuation", "stopping rules"]
+        severity: "major"
+
+  treatments:
+    name: "치료 및 투여"
+    checks:
+      - id: "proto_301"
+        category: "시험약"
+        description: "시험약의 용량(Dosage)이 명확히 기술되어 있는가?"
+        keywords: ["dosage", "용량", "dose"]
+        severity: "critical"
+
+      - id: "proto_302"
+        category: "시험약"
+        description: "투여 경로(Route of Administration)가 명시되어 있는가?"
+        keywords: ["route of administration", "투여 경로", "administration"]
+        severity: "critical"
+
+      - id: "proto_303"
+        category: "시험약"
+        description: "투여 기간(Duration)이 명시되어 있는가?"
+        keywords: ["duration", "기간", "treatment period"]
+        severity: "critical"
+
+      - id: "proto_304"
+        category: "병용약물"
+        description: "병용금지약물이 명시되어 있는가?"
+        keywords: ["concomitant medication", "병용약물", "prohibited medication", "금지약물"]
+        severity: "major"
+
+  assessments:
+    name: "평가 및 절차"
+    checks:
+      - id: "proto_401"
+        category: "평가변수"
+        description: "주요 평가변수(Primary Endpoint)가 명확히 정의되어 있는가?"
+        keywords: ["primary endpoint", "주요 평가변수", "primary outcome"]
+        severity: "critical"
+
+      - id: "proto_402"
+        category: "평가변수"
+        description: "부차 평가변수(Secondary Endpoint)가 정의되어 있는가?"
+        keywords: ["secondary endpoint", "부차 평가변수", "secondary outcome"]
+        severity: "major"
+
+      - id: "proto_403"
+        category: "방문일정"
+        description: "방문 일정(Visit Schedule)이 명시되어 있는가?"
+        keywords: ["visit schedule", "방문일정", "schedule of assessments"]
+        severity: "critical"
+
+  safety:
+    name: "안전성"
+    checks:
+      - id: "proto_501"
+        category: "이상반응"
+        description: "이상반응(Adverse Event) 보고 절차가 기술되어 있는가?"
+        keywords: ["adverse event", "이상반응", "AE", "safety reporting"]
+        severity: "critical"
+
+      - id: "proto_502"
+        category: "중대한이상반응"
+        description: "중대한 이상반응(SAE) 보고 절차가 명시되어 있는가?"
+        keywords: ["serious adverse event", "SAE", "중대한 이상반응"]
+        severity: "critical"
+
+      - id: "proto_503"
+        category: "안전성모니터링"
+        description: "안전성 모니터링 계획이 기술되어 있는가?"
+        keywords: ["safety monitoring", "안전성 모니터링", "DSMB", "DMC"]
+        severity: "major"
+
+  statistics:
+    name: "통계 분석"
+    checks:
+      - id: "proto_601"
+        category: "통계분석"
+        description: "통계 분석 계획이 기술되어 있는가?"
+        keywords: ["statistical analysis", "통계 분석", "analysis plan"]
+        severity: "critical"
+
+      - id: "proto_602"
+        category: "분석군"
+        description: "분석 대상 집단(Analysis Set)이 정의되어 있는가?"
+        keywords: ["analysis set", "ITT", "PP", "분석군", "population"]
+        severity: "critical"
+
+  ethics:
+    name: "윤리적 고려사항"
+    checks:
+      - id: "proto_701"
+        category: "IRB"
+        description: "IRB 승인 관련 내용이 기술되어 있는가?"
+        keywords: ["IRB", "institutional review board", "윤리위원회", "ethics committee"]
+        severity: "critical"
+
+      - id: "proto_702"
+        category: "동의서"
+        description: "동의서(Informed Consent) 절차가 기술되어 있는가?"
+        keywords: ["informed consent", "동의서", "ICF"]
+        severity: "critical"
+
+      - id: "proto_703"
+        category: "개인정보"
+        description: "개인정보 보호 계획이 기술되어 있는가?"
+        keywords: ["confidentiality", "개인정보", "privacy", "data protection"]
+        severity: "major"
+
+# 자동 검색 패턴
+patterns:
+  version_number:
+    regex: "(version|ver\\.?)\\s*[:.]?\\s*\\d+\\.\\d+"
+    description: "버전 번호 패턴"
+
+  date_format:
+    regex: "\\d{1,2}[-/]\\d{1,2}[-/]\\d{2,4}|\\d{4}[-/]\\d{1,2}[-/]\\d{1,2}"
+    description: "날짜 형식"
+
+  dose_pattern:
+    regex: "\\d+\\s*(mg|g|ml|mcg|µg)"
+    description: "용량 표현"
