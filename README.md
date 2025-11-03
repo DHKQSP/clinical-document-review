@@ -26,6 +26,20 @@
 
 ## 🚀 빠른 시작
 
+### 사용 방법 선택
+
+**방법 1: 실행 파일(.exe) 다운로드** ⭐ (가장 쉬움 - Python 설치 불필요)
+
+```
+1. 배포된 .exe 파일 다운로드
+2. 더블클릭으로 바로 실행
+3. Python 설치 필요 없음!
+```
+
+👉 [실행 파일 빌드 방법 보기](#-실행-파일exe-배포)
+
+**방법 2: Python으로 실행** (개발자용)
+
 ### 1. 필수 요구사항
 
 - Python 3.8 이상
@@ -339,3 +353,64 @@ A: 네, `config/` 폴더의 YAML 파일을 수정하여 기관별 요구사항�
 ---
 
 **면책조항**: 이 도구는 임상문서 검토를 보조하는 도구입니다. 규제 제출용 문서의 최종 검토 및 승인은 반드시 자격을 갖춘 전문가가 수행해야 합니다.
+
+---
+
+## 💾 실행 파일(.exe) 배포
+
+### Python 설치 없이 사용하기 ⭐
+
+**2가지 버전 제공:**
+
+1. **CLI 버전** (~50MB)
+   - 명령줄 인터페이스
+   - 빠르고 가벼움
+   - 스크립트 자동화 가능
+
+2. **웹 앱 버전** (~150MB)
+   - 브라우저 GUI 인터페이스
+   - 더블클릭으로 실행
+   - 사용하기 가장 쉬움
+
+### 빌드 방법
+
+```bash
+# PyInstaller 설치
+pip install pyinstaller
+
+# CLI 버전 빌드
+build_cli.bat           # Windows
+pyinstaller clinical-review.spec  # Linux/Mac
+
+# 웹 앱 버전 빌드
+build_web.bat           # Windows
+pyinstaller clinical-review-web.spec  # Linux/Mac
+
+# 또는 자동 빌드
+python build_exe.py
+```
+
+빌드 완료 후 `dist/` 폴더에 실행 파일이 생성됩니다.
+
+### 배포 및 사용
+
+**배포 방법:**
+- USB 드라이브에 복사
+- 네트워크 공유 폴더
+- 이메일 전송 (.zip 압축 권장)
+
+**사용 방법:**
+
+**CLI 버전:**
+```bash
+ClinicalReview.exe review protocol.pdf --type protocol
+```
+
+**웹 앱 버전:**
+1. `ClinicalReview-Web.exe` 더블클릭
+2. 브라우저 자동 실행
+3. PDF 업로드 및 검토
+
+**상세 가이드**: `BUILD_GUIDE.md` 참조
+
+---
