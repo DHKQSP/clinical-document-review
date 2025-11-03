@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  clinical-review:
+    build: .
+    container_name: clinical-review-app
+    ports:
+      - "8501:8501"
+    volumes:
+      # 로컬 폴더와 연결하지 않음 (보안)
+      # 모든 처리는 컨테이너 내부에서만
+      - /dev/null:/app/.streamlit
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_SERVER_FILE_WATCHER_TYPE=none
+    restart: unless-stopped
+    # 네트워크 격리 (외부 통신 차단)
+    networks:
+      - isolated
+    # 보안 옵션
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: false
+    tmpfs:
+      - /tmp
+
+networks:
+  isolated:
+    driver: bridge
+    internal: true  # 외부 인터넷 차단
